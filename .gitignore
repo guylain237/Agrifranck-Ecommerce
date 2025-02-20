@@ -2,3 +2,5 @@ api/node_modules
 agrifranck/node_modules
 api/.env
 agrifranck/.env
+api/package-lock.json
+agrifranck/package-lock.json
