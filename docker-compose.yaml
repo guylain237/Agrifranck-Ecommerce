@@ -1,0 +1,55 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./agrifranck
+    container_name: agrifrank
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+    networks:
+      - mern-app
+
+  backend:
+    build: ./api
+    container_name: agrifrank-api
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      MONGODB_USERNAME: guylain
+      MONGODB_PASSWORD: boss237.com
+      FRONTEND_URL: http://localhost:3000
+      MONGODB_URL: "mongodb://mongo:27017/agrifrankdb"
+      JWT_SECRET: bcudjbcueruhcferègvèrefyèerych
+      PORT: 5000
+      AUTH_EMAIL: tech@kraftwebtv.com
+      AUTH_PASSWORD: Kraft@2024
+      CLIENT_URL: http://localhost:3000
+      SEND_TO: tech@kraftwebtv.com
+      SMTP_PORT: 465
+      SMTP_HOST: ssl0.ovh.net
+      MONGO_OPTIONS: "retryWrites=true&w=majority"  # Optimisation pour la fiabilité des écritures
+    depends_on:
+      - mongo  # Dépendance à MongoDB
+    networks:
+      - mern-app  
+
+  mongo:
+    image: mongo:latest
+    container_name: agrifrank-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secretpassword
+    networks:
+      - mern-app
+
+networks:
+  mern-app:
+    driver: bridge

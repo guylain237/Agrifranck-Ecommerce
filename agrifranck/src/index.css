@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Pour Google Chrome et Microsoft Edge */
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+  background: #ac1212; /* Couleur de fond de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8f0d0d; /* Couleur de la poignée de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9a0707; /* Couleur de la poignée de la barre de défilement au survol */
+}
+
+/* Pour Firefox */
+* {
+  scrollbar-width: thin; /* Largeur de la barre de défilement */
+  scrollbar-color: #d71212 #078a8c; /* Couleur de la poignée et du fond de la barre de défilement */
+}
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
