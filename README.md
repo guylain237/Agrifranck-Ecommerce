@@ -36,7 +36,7 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
    npm run server
    ```
 
-Le backend devrait maintenant être accessible à l'adresse `http://localhost:5000` (ou autre port défini dans votre configuration).
+Le backend devrait maintenant être accessible à l'adresse `http://localhost:5001` (ou autre port défini dans votre configuration .env ).
 
 ---
 
