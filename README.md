@@ -22,7 +22,11 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
    ```sh
    npm install
    ```
-3. Démarrez le serveur :
+3. Créez un fichier `.env` en vous basant sur `.env.example` :
+   ```sh
+   cp .env.example .env
+   ```
+4. Démarrez le serveur :
    ```sh
    npm run server
    ```
@@ -41,7 +45,11 @@ Le backend devrait maintenant être accessible à l'adresse `http://localhost:50
    ```sh
    npm install
    ```
-3. Lancez l'application :
+3. Créez un fichier `.env` en vous basant sur `.env.example` :
+   ```sh
+   cp .env.example .env
+   ```
+4. Lancez l'application :
    ```sh
    npm start
    ```
